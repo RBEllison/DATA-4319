@@ -5,15 +5,15 @@ A collection of machine learning algorithms intended to enhance the knowledge of
 </p>
 
 ## Table of Contents
-- [Unsupervised Learning]()
- -[Algorithm1]()
- -[Algorithm2]()
- -[Algorithm3]()
-- [Supervised Learning]()
- -[Algorithm1]()
- -[Algorithm2]()
- -[Algorithm3]()
-- [Reinforcment Learning]()
- -[Algorithm1]()
- -[Algorithm2]()
- -[Algorithm3]()
+- [Unsupervised Learning]() <br>
+ -[Algorithm1]() <br>
+ -[Algorithm2]() <br>
+ -[Algorithm3]() <br>
+- [Supervised Learning]() <br>
+ -[Algorithm1]() <br>
+ -[Algorithm2]() <br>
+ -[Algorithm3]() <br>
+- [Reinforcment Learning]() <br>
+ -[Algorithm1]() <br>
+ -[Algorithm2]() <br>
+ -[Algorithm3]() <br>
