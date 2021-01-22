@@ -17,3 +17,16 @@ A collection of machine learning algorithms intended to enhance the knowledge of
  -[Algorithm1]() <br>
  -[Algorithm2]() <br>
  -[Algorithm3]() <br>
+
+
+# Unsupervised Learning
+<p>
+</p>
+
+# Supervised Learning
+<p>
+</p>
+
+# Reinforcement Learning
+<p>
+</p>
