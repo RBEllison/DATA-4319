@@ -22,6 +22,9 @@ A collection of machine learning algorithms intended to enhance the knowledge of
      -[Algorithm4]() 
 
 
+# Resources
+Resources, include data and images, and can be found in the [ _resources](). All images are public domain. Datasets were downloaded from Kaggle.com
+
 
 # Tech and Framework Used
 - Skill 1
