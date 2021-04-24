@@ -9,20 +9,20 @@ A collection of machine learning algorithms intended to enhance the knowledge of
   + Association <br> 
     - [Apriori](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Unsupervised%20Learning/Association/Apriori) <br>
   + Clustering
-    - [K-means]() <br>
+    - [K-means](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Unsupervised%20Learning/Clustering/K-means) <br>
 - Supervised Learning <br>
   + Classification <br> 
-    - [Logistic]() <br>
-    - [Perceptron]() <br>
-    - [K-Nearest Neighbor]() <br>
-    - [Support Vector Machine]() <br>
+    - [Logistic](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Supervised%20Learning/Classification/Logistic) <br>
+    - [Perceptron](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Supervised%20Learning/Classification/Perceptron) <br>
+    - [K-Nearest Neighbor](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Supervised%20Learning/Classification/K-Nearest%20Neighbors) <br>
+    - [Support Vector Machine](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Supervised%20Learning/Classification/Support%20Vector%20Machine) <br>
   + Regression
-    - [Simple Linear]() <br>
-    - [Multiple Linear]() <br>
-    - [Polynomial]() <br>
-    - [Decision Tree]() <br>
+    - [Simple Linear](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Supervised%20Learning/Regression/Simple%20Linear) <br>
+    - [Multiple Linear](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Supervised%20Learning/Regression/Multiple%20Linear) <br>
+    - [Polynomial](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Supervised%20Learning/Regression/Polynomial) <br>
+    - [Decision Tree](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Supervised%20Learning/Regression/Decision%20Tree) <br>
 - Reinforcment Learning <br>
-    - [Neural Network]() <br>
+    - [Neural Network](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Reinforcement%20Learning/Neural%20Network) <br>
     
    
 - _resources
