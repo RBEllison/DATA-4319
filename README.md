@@ -6,20 +6,22 @@ A collection of machine learning algorithms intended to enhance the knowledge of
 
 ## Table of Contents
 - Unsupervised Learning <br>
+  + Association <br> 
+    - [Apriori]() <br>
+  + Clustering
+    - [K-means]() <br>
+- Supervised Learning <br>
   + Classification <br> 
+    - [Logistic]() <br>
     - [K-Nearest Neighbor]() <br>
+    - [Support Vector Machine]() <br>
   + Regression
     - [Simple Linear]() <br>
     - [Multiple Linear]() <br>
-- Supervised Learning <br>
-    -[Algorithm1]() <br>
-    -[Algorithm2]() <br>
-    -[Algorithm3]() <br>
+    - [Polynomial]() <br>
+    - [Decision Tree]() <br>
 - Reinforcment Learning <br>
-    -[Algorithm1]() <br>
-    -[Algorithm2]() <br>
-    -[Algorithm3]() <br>
-     -[Algorithm4]() 
+    - [Neural Network]() <br>
 
 
 # Resources
@@ -29,21 +31,8 @@ Resources, include data and images, and can be found in the [ _resources](). All
 # Tech and Framework Used
 - R
 - Markdown
-- Python
-
-# Features
-Stuff about features
-
-code example here
-
-# Installation
-Step by step installation
-
-# Tests
-Describe and show how to run the tests with code examples.
+- Latex
 
 # How to use?
-step by step guide to use project.
+Each algorithm contains two files; a pdf and a Rmarkdown studio. You can view the content by clicking on the PDF. You can also download main.Rmd and open it in Rstudio to view the source code.
 
-# Contribute
-Tell people how they can contribute
