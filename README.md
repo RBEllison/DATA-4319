@@ -33,6 +33,6 @@ Resources, include data and images, and can be found in the [ _resources](). All
 - Markdown
 - Latex
 
-# How to use?
+# How to use
 Each algorithm contains two files; a pdf and a Rmarkdown studio. You can view the content by clicking on the PDF. You can also download main.Rmd and open it in Rstudio to view the source code.
 
