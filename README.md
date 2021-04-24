@@ -6,8 +6,8 @@ A collection of machine learning algorithms intended to enhance the knowledge of
 
 ## Table of Contents
 - Unsupervised Learning <br>
-|_____  + Association <br> 
-      |_____ - [Apriori](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Unsupervised%20Learning/Association/Apriori) <br>
+  + Association <br> 
+      - [Apriori](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Unsupervised%20Learning/Association/Apriori) <br>
   + Clustering
     - [K-means](https://github.com/RBEllison/Machine-Learning-Algorithm-Projects/tree/main/Unsupervised%20Learning/Clustering/K-means) <br>
 - Supervised Learning <br>
