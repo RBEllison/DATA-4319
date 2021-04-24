@@ -6,9 +6,12 @@ A collection of machine learning algorithms intended to enhance the knowledge of
 
 ## Table of Contents
 - Unsupervised Learning <br>
- -[Algorithm1]() <br>
- -[Algorithm2]() <br>
- -[Algorithm3]() <br>
+ + Classification <br> 
+  - [K-Nearest Neighbor]() <br>
+ + Regression
+  
+  - [Algorithm2]() <br>
+  - [Algorithm3]() <br>
 - Supervised Learning <br>
  -[Algorithm1]() <br>
  -[Algorithm2]() <br>
