@@ -13,6 +13,7 @@ A collection of machine learning algorithms intended to enhance the knowledge of
 - Supervised Learning <br>
   + Classification <br> 
     - [Logistic]() <br>
+    - [Perceptron]() <br>
     - [K-Nearest Neighbor]() <br>
     - [Support Vector Machine]() <br>
   + Regression
