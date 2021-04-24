@@ -6,10 +6,10 @@ A collection of machine learning algorithms intended to enhance the knowledge of
 
 ## Table of Contents
 - Unsupervised Learning <br>
-    + Association <br> 
-        - [Apriori]() <br>
-    + Clustering
-        - [K-means]() <br>
+  + Association <br> 
+    - [Apriori]() <br>
+  + Clustering
+    - [K-means]() <br>
 - Supervised Learning <br>
   + Classification <br> 
     - [Logistic]() <br>
@@ -23,6 +23,11 @@ A collection of machine learning algorithms intended to enhance the knowledge of
     - [Decision Tree]() <br>
 - Reinforcment Learning <br>
     - [Neural Network]() <br>
+    
+   
+- _resources
+    + Data
+    + Images
 
 
 # Resources
