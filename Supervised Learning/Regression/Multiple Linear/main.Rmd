@@ -1,6 +1,6 @@
 ---
-title: "Type of Algorithm"
-subtitle : "subtitleData"
+title: "Multiple Linear Regression Algorithm"
+subtitle : "Using Acetylene Data"
 author: 'Author : Rose Ellison'
 output:
   pdf_document: default
@@ -20,91 +20,125 @@ library(ggplot2)
 library(gridExtra)
 ```
 
-![]("../../../_resources/images/ads.jpg")
+![]("../../../_resources/images/acet")
 
 \newpage
 
 ## The Intuition
-fdjks jsdfs fjsdfjasdsja <br>
+Linear regression is a type of supervised learning algorithm which predicts continuous values of a given data point by generalising on the data that we have in hand. The linear part indicates that we are using a linear approach in generalising over the data. Multiple indicates we are describing the relationship between one dependent and more than one independent variable using a straight line. With simple linear regression we found the coefficients using the least squares method. This is too complicated for multiple linear regression so we will use matrices to make things more simple. <br><br>
 
-**Step One: ** ndsjk jds ksd jdsk jsda jdksl;
+$$\hat y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 \ + .... \beta_n x_n  $$
 
-**Step Two : **  fjsk fjkdsl fjkdsa
+**Step One : ** Split the data into test and training sets.
+
+**Step Two: ** Define the matrices.
  
-**Step Three : **  fjdsk fjk hdksa
+**Step Three : ** Estimate coefficients.
  
-   - **3A : ** fhjdksfj kds fjk fjkds fjkdas jka
-  
-$$Some Calculation$$
+**Step Four : ** Make Predictions based on the coefficients.
 
-  - **3B : ** hfkds hjks 
-    
-  - **3C : ** f dsjkhdjsk hdjks hdsk
-    
-  - **3D : ** h djsk jskd hjks hdksa
+**Step Five : ** Validate the model.
  
 
 ## Exploration
- hdjkshjksd hdjksa hjkds hajk
+Exploration process includes preprocessing and visualizing plots. This algorithm will be implemented on the aceytyne data. There are five columns (four independent variables, and one dependent). We will use multiple linear regression to predict if the conversion of n-Heptane to Acetylene (%) on future data points. 
 
-### Preprocessing
 ```{r}
 # Read the data
-data = read.csv('../../../_resources/data/Social_Network_Ads.csv')
-data <- data[, 3:5]
-# Feature Scaling
-data[-3] = scale(data[-3])
+data = read.csv('../../../_resources/data/Acetyne.csv')
+head(data)
 ```
 
 \newpage
 
 ### Plot
 ```{r}
-ggplot(data,aes(x = data[, 1], 
-                y = data[, 2], 
-                color = factor(data[ , 3]))) + 
-  geom_point() +
-  labs(x = "Salary", 
-       y = "Age") + 
-  ggtitle("Purchased : Salary vs Age")
+par(mfrow = c(2,2))
+plot(data$x1, data$y, col = 'cyan', pch = 16)
+plot(data$x2, data$y, col = 'cyan', pch = 16)
+plot(data$x3, data$y, col = 'cyan', pch = 16)
+plot(data$x4, data$y, col = 'cyan', pch = 16)
+
 ```
 
-h dsjkhksda hdksa
 
+We can see that there is a linear relationship between each of these predictors and the dependent variable. Some relationships are stronger than others. This makes this data a good candidate for multiple linear regression.
+
+
+\newpage
 ## Implementation
 
+
 ### Step One : 
- fdshjk fgdhjs hjsad
+Split the data into test and training sets.
 
 ```{r}
 # Splitting test and training sets
-split <- sample.split(data[ , 3], SplitRatio = 0.8)
+split <- sample.split(data[ , 1], SplitRatio = 0.6)
 training <- subset(data, split == TRUE)
 test <- subset(data, split == FALSE)
 ```
 
 ### Step Two : 
-bdhsjk fhdjska
-```{r}
+Define the matrices.
 
+```{r}
+y_matrix <- as.matrix(training$y)
+y_matrix
+x_matrix <- as.matrix(cbind(1, training$x1, training$x2, training$x3, training$x4))
+x_matrix
 ```
 
 ### Step Three : 
-bfhdsj fsdhal s
+Estimate the beta hat matrix
 
-#### 3A.) 
 ```{r}
-
+betahat_matrix <- solve(t(x_matrix)%*%x_matrix)%*%t(x_matrix)%*%y_matrix
+betahat_matrix
 ```
 
-#### 4A.)
+**Thus,**
+
+$$\beta_0 = 99.98944464$$
+$$\beta_1 = 1.23448939$$
+$$\beta_2 = 0.08963962$$
+$$\beta_3 = -0.14305410$$
+$$\beta_4 = -0.52219985$$
+
+### Step Four : Make predictions
+
+$$\hat y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 \ + \beta_3 x_3 +  \beta_4 x_4  $$
+
 ```{r}
+
+multiple_lr <- function(betas, test)
+{
+  B0H <- betas[1]
+  B1H <- betas[2]
+  B2H <- betas[3]
+  B3H <- betas[4]
+  B4H <- betas[5]
+  
+  x_test <- test[2:5]
+  
+  for (i in 1:nrow(test))
+  {
+    yhat <- B0H + B1H * x_test[i,1] + B2H * x_test[i,2] + B3H * x_test[i,3] + B4H * x_test[i,4]
+    test$y_pred[i] <- yhat
+  }
+  
+  return(test)
+}
+
+test <- multiple_lr(betahat_matrix, test)
 ```
+
+
 ## Results
+Compare predicted results(y-pred column) to the actual y values(y column) on our test set. 
 ```{r}
-
+test[, c(1,6,2,3,4,5)]
 ```
-fbjds hjdsk hdjksa ak
 
 
 
