@@ -27,8 +27,9 @@ Resources, include data and images, and can be found in the [ _resources](). All
 
 
 # Tech and Framework Used
-- Skill 1
-- Skill 2
+- R
+- Markdown
+- Python
 
 # Features
 Stuff about features
