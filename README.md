@@ -6,8 +6,8 @@ A collection of machine learning algorithms intended to enhance the knowledge of
 
 ## Table of Contents
 - Unsupervised Learning <br>
- + Classification <br> 
-  - [K-Nearest Neighbor]() <br>
+  + Classification <br> 
+    - [K-Nearest Neighbor]() <br>
  + Regression
   
   - [Algorithm2]() <br>
