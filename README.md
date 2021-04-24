@@ -26,8 +26,8 @@ A collection of machine learning algorithms intended to enhance the knowledge of
     
    
 - _resources
-    + Data
-    + Images
+    + [Data]() <br>
+    + [Images]() <br>
 
 
 # Resources
