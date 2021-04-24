@@ -8,19 +8,18 @@ A collection of machine learning algorithms intended to enhance the knowledge of
 - Unsupervised Learning <br>
   + Classification <br> 
     - [K-Nearest Neighbor]() <br>
- + Regression
-  
-  - [Algorithm2]() <br>
-  - [Algorithm3]() <br>
+  + Regression
+    - [Simple Linear]() <br>
+    - [Multiple Linear]() <br>
 - Supervised Learning <br>
- -[Algorithm1]() <br>
- -[Algorithm2]() <br>
- -[Algorithm3]() <br>
+    -[Algorithm1]() <br>
+    -[Algorithm2]() <br>
+    -[Algorithm3]() <br>
 - Reinforcment Learning <br>
- -[Algorithm1]() <br>
- -[Algorithm2]() <br>
- -[Algorithm3]() <br>
- -[Algorithm4]() 
+    -[Algorithm1]() <br>
+    -[Algorithm2]() <br>
+    -[Algorithm3]() <br>
+     -[Algorithm4]() 
 
 
 
