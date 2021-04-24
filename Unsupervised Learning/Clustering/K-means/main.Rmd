@@ -1,0 +1,111 @@
+---
+title: "Type of Algorithm"
+subtitle : "subtitleData"
+author: 'Author : Rose Ellison'
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(knitr)
+library(magrittr)
+library(tidyverse)
+library(dplyr)
+library(sqldf)
+library(caTools)
+library(ggplot2)
+library(gridExtra)
+```
+
+![]("../../../_resources/images/ads.jpg")
+
+\newpage
+
+## The Intuition
+fdjks jsdfs fjsdfjasdsja <br>
+
+**Step One: ** ndsjk jds ksd jdsk jsda jdksl;
+
+**Step Two : **  fjsk fjkdsl fjkdsa
+ 
+**Step Three : **  fjdsk fjk hdksa
+ 
+   - **3A : ** fhjdksfj kds fjk fjkds fjkdas jka
+  
+$$Some Calculation$$
+
+  - **3B : ** hfkds hjks 
+    
+  - **3C : ** f dsjkhdjsk hdjks hdsk
+    
+  - **3D : ** h djsk jskd hjks hdksa
+ 
+
+## Exploration
+ hdjkshjksd hdjksa hjkds hajk
+
+### Preprocessing
+```{r}
+# Read the data
+data = read.csv('../../../_resources/data/Social_Network_Ads.csv')
+data <- data[, 3:5]
+# Feature Scaling
+data[-3] = scale(data[-3])
+```
+
+\newpage
+
+### Plot
+```{r}
+ggplot(data,aes(x = data[, 1], 
+                y = data[, 2], 
+                color = factor(data[ , 3]))) + 
+  geom_point() +
+  labs(x = "Salary", 
+       y = "Age") + 
+  ggtitle("Purchased : Salary vs Age")
+```
+
+h dsjkhksda hdksa
+
+## Implementation
+
+### Step One : 
+ fdshjk fgdhjs hjsad
+
+```{r}
+# Splitting test and training sets
+split <- sample.split(data[ , 3], SplitRatio = 0.8)
+training <- subset(data, split == TRUE)
+test <- subset(data, split == FALSE)
+```
+
+### Step Two : 
+bdhsjk fhdjska
+```{r}
+
+```
+
+### Step Three : 
+bfhdsj fsdhal s
+
+#### 3A.) 
+```{r}
+
+```
+
+#### 4A.)
+```{r}
+```
+## Results
+```{r}
+
+```
+fbjds hjdsk hdjksa ak
+
+
+
+
