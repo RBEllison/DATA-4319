@@ -1,6 +1,6 @@
 ---
-title: "Type of Algorithm"
-subtitle : "subtitleData"
+title: "Simple Linear Regression Algorithm"
+subtitle : "Using Rocket Propellant Data"
 author: 'Author : Rose Ellison'
 output:
   pdf_document: default
@@ -20,91 +20,119 @@ library(ggplot2)
 library(gridExtra)
 ```
 
-![]("../../../_resources/images/ads.jpg")
+![]("../../../_resources/images/rocket.jpg")
 
 \newpage
 
 ## The Intuition
-fdjks jsdfs fjsdfjasdsja <br>
+Linear regression is a type of supervised learning algorithm which predicts continuous values of a given data point by generalising on the data that we have in hand. The linear part indicates that we are using a linear approach in generalising over the data. Simple indicates we are describing the relationship between one dependent and one independent variable using a straight line. <br><br>
 
-**Step One: ** ndsjk jds ksd jdsk jsda jdksl;
+$$\hat y = \beta_0 + \beta x_1$$
+**Step One : ** Split the data into test and training sets.
 
-**Step Two : **  fjsk fjkdsl fjkdsa
+**Step Two: ** Calculate the sum of squares
  
-**Step Three : **  fjdsk fjk hdksa
+**Step Three : ** Estimate coefficients using lest squares.
  
-   - **3A : ** fhjdksfj kds fjk fjkds fjkdas jka
-  
-$$Some Calculation$$
+**Step Four : ** Make Predictions based on the coefficients.
 
-  - **3B : ** hfkds hjks 
-    
-  - **3C : ** f dsjkhdjsk hdjks hdsk
-    
-  - **3D : ** h djsk jskd hjks hdksa
+**Step Five : ** Validate the model.
  
 
 ## Exploration
- hdjkshjksd hdjksa hjkds hajk
+Exploration process includes preprocessing and visualizing plots. This algorithm will be implemented on the rocket propellant data. There are two columns; age of rockets propellant(independent variable) and shear strength( continuous dependent variable). We will use simple linear regression to predict if the shear strength of future rocket propellants based on their age. 
 
-### Preprocessing
 ```{r}
 # Read the data
-data = read.csv('../../../_resources/data/Social_Network_Ads.csv')
-data <- data[, 3:5]
-# Feature Scaling
-data[-3] = scale(data[-3])
+data = read.csv('../../../_resources/data/Rocket_Prop.csv')
 ```
 
 \newpage
 
 ### Plot
 ```{r}
-ggplot(data,aes(x = data[, 1], 
-                y = data[, 2], 
-                color = factor(data[ , 3]))) + 
-  geom_point() +
-  labs(x = "Salary", 
-       y = "Age") + 
-  ggtitle("Purchased : Salary vs Age")
+ggplot(data,aes(x = data[, 2], 
+                y = data[, 1])) + 
+  geom_point(col = 3) +
+  labs(x = "Age of Propellant (Weeks)", 
+       y = "Shear Strength (psi)") + 
+  ggtitle("Shear Strength vs Propellant Age")
 ```
+From the data, we can see there is a linear relationships between age of propellant and shear strength. For that reason, simple linear regression would be a good model to predict future data points. 
 
-h dsjkhksda hdksa
-
+\newpage
 ## Implementation
 
 ### Step One : 
- fdshjk fgdhjs hjsad
+Split the data into test and training sets.
 
 ```{r}
 # Splitting test and training sets
-split <- sample.split(data[ , 3], SplitRatio = 0.8)
+split <- sample.split(data[ , 1], SplitRatio = 0.6)
 training <- subset(data, split == TRUE)
 test <- subset(data, split == FALSE)
 ```
 
 ### Step Two : 
-bdhsjk fhdjska
-```{r}
+Find the sum of squares
 
+$$sum \ of \ squares \ of \ S_{xx} = \sum(x^2) - \frac{\sum(x)^2}{n}$$
+$$sum \ of \ squares \ of \ S_{xy} = \sum(xy) - \frac{\sum(x) \sum(y)}{n}$$
+```{r}
+x <- training[2]
+y <- training[1]
+n <- nrow(x)
+Sxx <- sum(x^2) - sum(x)^2/n
+Sxy <- sum(x*y) - sum(x)*sum(y)/n
 ```
 
 ### Step Three : 
-bfhdsj fsdhal s
-
-#### 3A.) 
+Estimate coefficients.
+$$\beta_1 = \frac{S_{xy}}{S_{xx}}$$
+$$\beta_0 = \bar y - \beta_1 \ \bar x$$
 ```{r}
-
+# Calculate Least Squares Estimates
+B1H <- Sxy / Sxx # Slope Estimate
+B0H <- (sum(y) / n) - ((sum(x) / n)*B1H) # Intercept Estimate
 ```
 
-#### 4A.)
+### Step Four : Make predictions
+Put it all together and make predictions
+$$\hat y = \beta_0 + \beta_1 \ x$$
+
 ```{r}
+
+simple_lr <- function(training, test, y_index, x_index)
+{
+  x <- training[2]
+  y <- training[1]
+  n <- nrow(x)
+  Sxx <- sum(x^2) - sum(x)^2/n
+  Sxy <- sum(x*y) - sum(x)*sum(y)/n
+  
+  B1H <- Sxy / Sxx # Slope Estimate
+  B0H <- (sum(y) / n) - ((sum(x) / n)*B1H)
+
+  x_test <- test[2]
+  
+  for (i in 1:nrow(test))
+  {
+    yhat <- B0H + B1H * x_test[i,]
+    test$y_pred[i] <- yhat
+  }
+  
+  return(test)
+}
+
+test<- simple_lr(training, test, 1, 2)
 ```
+
+
 ## Results
+Compare predicted results(y-pred column) to the actual y values(y column) on our test set. 
 ```{r}
-
+test[ , c(1, 3)]
 ```
-fbjds hjdsk hdjksa ak
 
 
 
