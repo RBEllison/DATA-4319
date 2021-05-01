@@ -36,6 +36,7 @@ Resources, include data and images, and can be found in the [ _resources]() fold
 
 # Tech and Framework Used
 - R
+- Python
 - Markdown
 - Latex
 
