@@ -60,7 +60,7 @@ ggplot(data,aes(x = data[, 2],
 ```
 From the data, we can see there is a linear relationships between age of propellant and shear strength. For that reason, simple linear regression would be a good model to predict future data points. 
 
-\newpage
+\pagebreak
 ## Implementation
 
 ### Step One : 

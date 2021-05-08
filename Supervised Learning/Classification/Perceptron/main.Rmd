@@ -1,6 +1,7 @@
 ---
-title: "Perceptron Algorithm"
-author: "Author : Rose Ellison"
+title: "Perceptron Classification Algorithm"
+subtitle : "Using Titanic Data"
+author: 'Author : Rose Ellison'
 output:
   pdf_document: default
   html_document: default
@@ -29,26 +30,27 @@ $$ 1: Activation > 0.0 $$
 $$ 0: Activation <= 0.0 $$
 
 ## Exploring the Example Dataset
-The dataset we will be using to implement the percpetron algorithm is the iris dataset from the R base library. The two independent variable
+The dataset we will be using to implement the percpetron algorithm is the titanic dataset from the R base library. The two independent variable are age and fare price. 
 
 ### Preprocessing
+
 ```{r, echo = FALSE}
-data <- read.csv(../)
-data$Species <- ifelse(data$Species == "setosa", 1, -1)
-x <- data[ , 1:2]
-y <- data[ , 3]
+data <- read.csv('../../../_resources/data/titanic.csv')
+data$survived <- ifelse(data$survived == 1, 1, -1)
+x <- data[ , c(5, 9)]
+y <- data[ , 2]
 ```
 
 
 ### Plot
 ```{r, echo = FALSE}
-ggplot(data,aes(x = data[, 1], 
-                y = data[, 2], 
-                color = factor(data[ , 3]))) + 
+ggplot(data,aes(x = data[, 5], 
+                y = data[, 9], 
+                color = factor(data[ , 2]))) + 
   geom_point() +
-  labs(x = "Sepal Length", 
-       y = "Sepal Width") + 
-  ggtitle("Species : Setosa and Versicolor")
+  labs(x = "Age", 
+       y = "Fare Price") + 
+  ggtitle("Survived : Fare Price vs Age")
 
 
 ```
@@ -61,6 +63,7 @@ R code implementation of the perceptron algorithm, without the use of built-in f
 
 
 ```{r algorithm}
+
 sign <- function(weights, x)
 {
   weights <- as.integer(weights)
